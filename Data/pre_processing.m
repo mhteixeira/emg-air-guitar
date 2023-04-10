@@ -1,3 +1,10 @@
-filename = '../Signal_acquisition/COM3_2023_04_08.20.51.43.205.txt';
-data = readmatrix(filename);
+filename = './murillo/punch_continuous.txt';
+punch = readmatrix(filename);
 plot(data);
+filenames = ['punch_continuous.txt', 'rest_continuous.txt', 
+    'thumbs_up_continuous.txt', 'victory_continuous.txt'];
+
+
+arquivos(:, 0:1000);
+
+for file in filenames
