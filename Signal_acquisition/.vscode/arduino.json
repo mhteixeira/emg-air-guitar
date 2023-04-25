@@ -1,7 +1,0 @@
-{
-    "board": "Seeeduino:samd:seeed_XIAO_m0",
-    "programmer": "avrisp",
-    "sketch": "Signal_acquisition.ino",
-    "configuration": "usbstack=arduino,debug=off,sercom4=include",
-    "port": "COM3"
-}

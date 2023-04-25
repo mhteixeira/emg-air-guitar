@@ -1,6 +1,0 @@
-{
-    "configuration": "usbstack=tinyusb,debug=off",
-    "board": "Seeeduino:samd:seeed_XIAO_m0",
-    "port": "COM18",
-    "sketch": "Signal_acquisition\\Signal_acquisition.ino"
-}

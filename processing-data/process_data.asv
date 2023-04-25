@@ -1,0 +1,67 @@
+% Specify the file name and path
+filename = './murillo/rest_continuous.txt';
+disp(filename)
+% Open the text file
+fid = fopen(filename, 'r');
+
+% Read in the lines of the text file
+C = textscan(fid, '%s -> %s');
+
+% Close the file
+fclose(fid);
+
+% Extract the values after "->" and convert to numerical format
+rest = cell2mat(cellfun(@(x) str2double(x), C{2}, 'UniformOutput', false));
+
+
+filename = './murillo/punch_continuous.txt';
+disp(filename)
+% Open the text file
+fid = fopen(filename, 'r');
+
+% Read in the lines of the text file
+C = textscan(fid, '%s -> %s');
+
+% Close the file
+fclose(fid);
+
+% Extract the values after "->" and convert to numerical format
+punch = cell2mat(cellfun(@(x) str2double(x), C{2}, 'UniformOutput', false));
+
+
+filename = './murillo/victory_continuous.txt';
+disp(filename)
+% Open the text file
+fid = fopen(filename, 'r');
+
+% Read in the lines of the text file
+C = textscan(fid, '%s -> %s');
+
+% Close the file
+fclose(fid);
+
+% Extract the values after "->" and convert to numerical format
+victory = cell2mat(cellfun(@(x) str2double(x), C{2}, 'UniformOutput', false));
+
+
+filename = './murillo/thumbs_up_continuous.txt';
+disp(filename)
+% Open the text file
+fid = fopen(filename, 'r');
+
+% Read in the lines of the text file
+C = textscan(fid, '%s -> %s');
+
+% Close the file
+fclose(fid);
+
+% Extract the values after "->" and convert to numerical format
+thumbs_up = cell2mat(cellfun(@(x) str2double(x), C{2}, 'UniformOutput', false));
+hold on;
+plot(punch)
+plot(thumbs_up)
+plot(rest)
+plot(victory)
+hold off;
+figure(2)
+plot([rest(1000:2000); punch(18000:20000)-200; rest(8000:1000)])
